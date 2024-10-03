@@ -2,10 +2,14 @@ window.addEventListener("load", function() {
     setTimeout ( function() {
 
         // Define DOM elements
-        const theRoot = document.querySelector("#root")
+        const theCanvas = document.querySelector("#the-canvas")
+        const startButton = document.querySelector("#start-button")
 
-        // Reveal root when window fully loaded
-        theRoot.classList.remove("hidden")
+        // Start the app
+        startButton.addEventListener("click", function() {
+            startButton.classList.add("hidden")
+            theCanvas.classList.remove("hidden");
+        })
 
         // Parallax
         var scene = document.getElementById('root');
