@@ -1,7 +1,7 @@
 /*
  * Ugly website deserves truly ugly code.
  * Code is not optimized at all, but it works.
- * Could not get the animation instancing to work with through looping for some reason.
+ * Could not get the animation instancing to work through looping for some reason.
  */
 
 
