@@ -240,7 +240,7 @@ function animateOne() {
         }
     });
     geometryOne.verticesNeedUpdate = true;
-    pointsOne.rotation.y +=0.010;
+    pointsOne.rotation.y +=0.018;
     renderer.render(scene, camera);
     requestAnimationFrame(animateOne);
 
@@ -257,7 +257,7 @@ function animateTwo() {
         }
     });
     geometryTwo.verticesNeedUpdate = true;
-    pointsTwo.rotation.y +=0.010;
+    pointsTwo.rotation.y +=0.018;
     renderer.render(scene, camera);
     requestAnimationFrame(animateTwo);
 }
@@ -273,7 +273,7 @@ function animateThree() {
         }
     });
     geometryThree.verticesNeedUpdate = true;
-    pointsThree.rotation.y +=0.010;
+    pointsThree.rotation.y +=0.018;
     renderer.render(scene, camera);
     requestAnimationFrame(animateThree);
 }
@@ -289,7 +289,7 @@ function animateFour() {
         }
     });
     geometryFour.verticesNeedUpdate = true;
-    pointsFour.rotation.y +=0.010;
+    pointsFour.rotation.y +=0.018;
     renderer.render(scene, camera);
     requestAnimationFrame(animateFour);
 }
@@ -305,7 +305,7 @@ function animateFive() {
         }
     });
     geometryFive.verticesNeedUpdate = true;
-    pointsFive.rotation.y +=0.010;
+    pointsFive.rotation.y +=0.018;
     renderer.render(scene, camera);
     requestAnimationFrame(animateFive);
 }
@@ -321,7 +321,7 @@ function animateSix() {
         }
     });
     geometrySix.verticesNeedUpdate = true;
-    pointsSix.rotation.y +=0.010;
+    pointsSix.rotation.y +=0.018;
     renderer.render(scene, camera);
     requestAnimationFrame(animateSix);
 }
