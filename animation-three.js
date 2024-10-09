@@ -44,12 +44,12 @@ function initScene() {
 
     // Get the sprites
     const sprites = [
-        window.location.origin + '/images/logo-a.png',
-        window.location.origin + '/images/logo-d.png',
-        window.location.origin + '/images/logo-e.png',
-        window.location.origin + '/images/logo-m.png',
-        window.location.origin + '/images/logo-r.png',
-        window.location.origin + '/images/logo-v.png',
+        window.location.href + 'images/logo-a.png',
+        window.location.href + 'images/logo-d.png',
+        window.location.href + 'images/logo-e.png',
+        window.location.href + 'images/logo-m.png',
+        window.location.href + 'images/logo-r.png',
+        window.location.href + 'images/logo-v.png',
     ];
 
     
