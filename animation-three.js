@@ -28,11 +28,6 @@ function initScene() {
     renderer.toneMapping = THREE.ReinhardToneMapping;
     renderer.toneMappingExposure = 10;
 
-    // Define the dynamic velocity & acceleration units. Calculates the value based on the window width
-    const alluVelocity = (value) => value + (window.innerWidth / 10000);
-    const alluAcceleration = (value) => {
-        return value + (window.innerWidth / 100000);
-    };
 
     // Define the dynamic unit. Factors the value based on the pixel depth of the screen
     // For some reason, the screen/device pixel depth affects the animation speed
@@ -74,8 +69,6 @@ function initScene() {
         );
         particleOne.velocity = alluUnit( 0.15 );
         particleOne.acceleration = alluUnit( 0.05 );
-        // particleOne.velocity = alluVelocity( 0.45 );
-        // particleOne.acceleration = alluAcceleration( 0.005 );
         geometryOne.vertices.push(particleOne);
     }
 
@@ -87,8 +80,6 @@ function initScene() {
         );
         particleTwo.velocity = alluUnit( 0.25 );
         particleTwo.acceleration = alluUnit( 0.003 );
-        // particleTwo.velocity = alluVelocity( 0.55 );
-        // particleTwo.acceleration = alluAcceleration( 0.003 );
         geometryTwo.vertices.push(particleTwo);
     }
 
@@ -100,8 +91,6 @@ function initScene() {
         );
         particleThree.velocity = alluUnit( 0.18 );
         particleThree.acceleration = alluUnit( 0.007 );
-        // particleThree.velocity = alluVelocity( 0.38 );
-        // particleThree.acceleration = alluAcceleration( 0.007 );
         geometryThree.vertices.push(particleThree);
     }
 
@@ -113,8 +102,6 @@ function initScene() {
         );
         particleFour.velocity = alluUnit( 0.22 );
         particleFour.acceleration = alluUnit( 0.004 );
-        // particleFour.velocity = alluVelocity( 0.42 );
-        // particleFour.acceleration = alluAcceleration( 0.004 );
         geometryFour.vertices.push(particleFour);
     }
 
@@ -126,8 +113,6 @@ function initScene() {
         );
         particleFive.velocity = alluUnit( 0.17 );
         particleFive.acceleration = alluUnit( 0.006 );
-        // particleFive.velocity = alluVelocity( 0.57 );
-        // particleFive.acceleration = alluAcceleration( 0.006 );
         geometryFive.vertices.push(particleFive);
     }
 
@@ -139,8 +124,6 @@ function initScene() {
         );
         particleSix.velocity = alluUnit( 0.14 );
         particleSix.acceleration = alluUnit( 0.009 );
-        // particleSix.velocity = alluVelocity( 0.14 );
-        // particleSix.acceleration = alluAcceleration( 0.009 );
         geometrySix.vertices.push(particleSix);
     }
 
