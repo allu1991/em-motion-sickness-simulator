@@ -116,7 +116,7 @@ function initScene() {
     let textureOne = new THREE.TextureLoader().load( sprites[0] );
     let materialOne = new THREE.PointsMaterial({
         color: 0xaaaaaa,
-        size: 5.0,
+        size: 6.0,
         map: textureOne,
         transparent: true,
     });
@@ -124,7 +124,7 @@ function initScene() {
     let textureTwo = new THREE.TextureLoader().load( sprites[1] );
     let materialTwo = new THREE.PointsMaterial({
         color: 0xaaaaaa,
-        size: 5.0,
+        size: 6.0,
         map: textureTwo,
         transparent: true,
     });
@@ -132,7 +132,7 @@ function initScene() {
     let textureThree = new THREE.TextureLoader().load( sprites[2] );
     let materialThree = new THREE.PointsMaterial({
         color: 0xaaaaaa,
-        size: 5.0,
+        size: 6.0,
         map: textureThree,
         transparent: true,
     });
@@ -140,7 +140,7 @@ function initScene() {
     let textureFour = new THREE.TextureLoader().load( sprites[3] );
     let materialFour = new THREE.PointsMaterial({
         color: 0xaaaaaa,
-        size: 5.0,
+        size: 6.0,
         map: textureFour,
         transparent: true,
     });
@@ -148,7 +148,7 @@ function initScene() {
     let textureFive = new THREE.TextureLoader().load( sprites[4] );
     let materialFive = new THREE.PointsMaterial({
         color: 0xaaaaaa,
-        size: 5.0,
+        size: 6.0,
         map: textureFive,
         transparent: true,
     });
@@ -156,7 +156,7 @@ function initScene() {
     let textureSix = new THREE.TextureLoader().load( sprites[5] );
     let materialSix = new THREE.PointsMaterial({
         color: 0xaaaaaa,
-        size: 5.0,
+        size: 6.0,
         map: textureSix,
         transparent: true,
     });
