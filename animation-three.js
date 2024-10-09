@@ -27,7 +27,26 @@ function initScene() {
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.toneMapping = THREE.ReinhardToneMapping;
     renderer.toneMappingExposure = 10;
-    
+
+    // Define the dynamic velocity & acceleration units. Calculates the value based on the window width
+    const alluVelocity = (value) => value + (window.innerWidth / 10000);
+    const alluAcceleration = (value) => {
+        return value + (window.innerWidth / 100000);
+    };
+
+    // Define the dynamic unit. Factors the value based on the pixel depth of the screen
+    // For some reason, the screen/device pixel depth affects the animation speed
+    const alluUnit = (value) => {
+        let factor = 1;
+
+        if (window.screen.pixelDepth <= 24) {
+            factor = 10;
+        }
+
+        return value * factor;
+    };
+
+
     // Get the sprites
     const sprites = [
         window.location.origin + '/images/logo-a.png',
@@ -47,69 +66,81 @@ function initScene() {
     geometryFive = new THREE.Geometry();
     geometrySix = new THREE.Geometry();
 
-    for (let i = 0; i < 1200; i++) {
+    for (let i = 0; i < 4000; i++) {
         particleOne = new THREE.Vector3(
             Math.random() * 600 - 300,
             Math.random() * 600 - 300,
             Math.random() * 600 - 300
         );
-        particleOne.velocity = 0.15;
-        particleOne.acceleration = 0.05;
+        particleOne.velocity = alluUnit( 0.15 );
+        particleOne.acceleration = alluUnit( 0.05 );
+        // particleOne.velocity = alluVelocity( 0.45 );
+        // particleOne.acceleration = alluAcceleration( 0.005 );
         geometryOne.vertices.push(particleOne);
     }
 
-    for (let i = 0; i < 1200; i++) {
+    for (let i = 0; i < 4000; i++) {
         particleTwo = new THREE.Vector3(
             Math.random() * 600 - 300,
             Math.random() * 600 - 300,
             Math.random() * 600 - 300
         );
-        particleTwo.velocity = 0.25;
-        particleTwo.acceleration = 0.003;
+        particleTwo.velocity = alluUnit( 0.25 );
+        particleTwo.acceleration = alluUnit( 0.003 );
+        // particleTwo.velocity = alluVelocity( 0.55 );
+        // particleTwo.acceleration = alluAcceleration( 0.003 );
         geometryTwo.vertices.push(particleTwo);
     }
 
-    for (let i = 0; i < 1200; i++) {
+    for (let i = 0; i < 4000; i++) {
         particleThree = new THREE.Vector3(
             Math.random() * 600 - 300,
             Math.random() * 600 - 300,
             Math.random() * 600 - 300
         );
-        particleThree.velocity = 0.18;
-        particleThree.acceleration = 0.007;
+        particleThree.velocity = alluUnit( 0.18 );
+        particleThree.acceleration = alluUnit( 0.007 );
+        // particleThree.velocity = alluVelocity( 0.38 );
+        // particleThree.acceleration = alluAcceleration( 0.007 );
         geometryThree.vertices.push(particleThree);
     }
 
-    for (let i = 0; i < 1200; i++) {
+    for (let i = 0; i < 4000; i++) {
         particleFour = new THREE.Vector3(
             Math.random() * 600 - 300,
             Math.random() * 600 - 300,
             Math.random() * 600 - 300
         );
-        particleFour.velocity = 0.22;
-        particleFour.acceleration = 0.004;
+        particleFour.velocity = alluUnit( 0.22 );
+        particleFour.acceleration = alluUnit( 0.004 );
+        // particleFour.velocity = alluVelocity( 0.42 );
+        // particleFour.acceleration = alluAcceleration( 0.004 );
         geometryFour.vertices.push(particleFour);
     }
 
-    for (let i = 0; i < 1200; i++) {
+    for (let i = 0; i < 4000; i++) {
         particleFive = new THREE.Vector3(
             Math.random() * 600 - 300,
             Math.random() * 600 - 300,
             Math.random() * 600 - 300
         );
-        particleFive.velocity = 0.17;
-        particleFive.acceleration = 0.006;
+        particleFive.velocity = alluUnit( 0.17 );
+        particleFive.acceleration = alluUnit( 0.006 );
+        // particleFive.velocity = alluVelocity( 0.57 );
+        // particleFive.acceleration = alluAcceleration( 0.006 );
         geometryFive.vertices.push(particleFive);
     }
 
-    for (let i = 0; i < 1200; i++) {
+    for (let i = 0; i < 4000; i++) {
         particleSix = new THREE.Vector3(
             Math.random() * 600 - 300,
             Math.random() * 600 - 300,
             Math.random() * 600 - 300
         );
-        particleSix.velocity = 0.14;
-        particleSix.acceleration = 0.009;
+        particleSix.velocity = alluUnit( 0.14 );
+        particleSix.acceleration = alluUnit( 0.009 );
+        // particleSix.velocity = alluVelocity( 0.14 );
+        // particleSix.acceleration = alluAcceleration( 0.009 );
         geometrySix.vertices.push(particleSix);
     }
 
