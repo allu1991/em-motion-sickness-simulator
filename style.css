@@ -6,12 +6,18 @@ html {
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
 body {
     margin: 0;
     padding: 0;
 	background-color: #1c524f;
+}
+
+/* Fullscreen mode background color */
+body:not(:root):fullscreen::backdrop {
+	background: #1c524f;
 }
 
 * {
@@ -58,7 +64,8 @@ body {
 }
 
 #the-canvas.hidden,
-#start-button.hidden {
+#start-button.hidden,
+#screen-disclaimer.hidden {
     display: none;
     opacity: 0 !important;
     visibility: hidden !important;
@@ -77,4 +84,23 @@ body {
     font-weight: 600;
     cursor: pointer;
     pointer-events: auto;
+}
+
+#screen-disclaimer {
+    display: none;
+    text-align: center;
+    width: 100%;
+    top: calc(50% + 30px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+    #screen-disclaimer {
+        display: block;
+    }
 }
